@@ -1,0 +1,10 @@
+----Specifications----
+1)After signing up, kindly make one user "admin" in database by firing query-
+ 
+>update roles set role="admin" where user_id=1;
+
+2)Now, if you login with admin credentials, then admin homepage will open.
+OR
+ If you login with user credentials then user homepage will open.
+
+3)A mark will appear in front of the users in 'ApproveRequest' page if they have number of books issued in their page >=3.

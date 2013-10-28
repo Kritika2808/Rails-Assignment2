@@ -1,0 +1,37 @@
+<h1>Listing books</h1>
+
+<table align="center" border=1px width=600px>
+  <thead>
+    <tr>
+      <th>Book Title</th>&nbsp;
+      <th>Author name</th>&nbsp;
+      <th>No of pages</th>&nbsp;
+      <th>Book type</th>&nbsp;
+      <th>Release date</th>&nbsp;
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.book_title %></td>
+        <td><%= book.author_name %></td>
+        <td><%= book.no_of_pages %></td>
+        <td><%= book.book_type %></td>
+        <td><%= book.releasedate %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'New Book', new_book_path %>
+<%= link_to 'Home', admincontroller_adminhome_path %>

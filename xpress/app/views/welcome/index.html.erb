@@ -1,0 +1,78 @@
+<script>
+$(function() {
+$( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+$( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+});
+</script>
+<style>
+.ui-tabs-vertical { width: 55em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+</style>
+<h2>WELCOME</h2>
+
+<% if user_signed_in? %>
+Welcome: <%= current_user.detail.firstname %>
+<% end -%>
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Home</a></li>
+<li><a href="#tabs-2">About Us</a></li>
+<li><a href="#tabs-3">Contact Us</a></li>
+</ul>
+<div id="tabs-1">
+<h2>Home</h2>
+<p class="para" style="text-align:justify">   Library is regarded as the brain of any institute; many institutes understand the importance of the library to the growth of the institute and their esteem users (students).
+  LMS support the general requirement of the library like acquisition, cataloguing, circulation.
+  Library project system that offers many flexible and convenient features, allowing librarians and library users to maximize time and efficiency.
+  Library System gives the all detailed information about students, staff and books. It will track on the how many books available in library and books issued to the students.
+  It shows popular book among the students. It will provide book lost in library. It keeps the record of the suppliers and book binders. 
+  It generates MIS reports for management. Our software is customizable for any library requirement.
+
+</p>
+</div>
+<div id="tabs-2">
+<h2>About Us</h2>
+<p class="para" style="text-align:justify">Features of library management system:
+<br>
+    Only basic knowledge of computers is required for operation of Library Management System. As it has user-friendly application interface.
+    Library Management System is Customizable and User Configurable.
+    An inbuilt Settings module makes Library Management System flexibility to cater to diverse organizational needs.
+    It is build on .NET technology - one of the most latest and upcoming Technologies in the field of Information Technology, which makes you  a forerunner in the world of Information technology.
+    Library Management System brings information to the user's desktop through integration across all modules.
+    Library Management System has pre-defined reports. These are used for normal reporting as well as Administration & Staff development purpose. Additionally, Library Management System can be easily customized for their own customized reports.
+    Staff as well as student record is maintained
+    Newspapers attendance is maintained
+    Automatic fine fees calculation.</p>
+</div>
+<div id="tabs-3">
+<h2>Contact Us</h2>
+<p class="para" style="text-align:justify">Thank you for visiting our website, If you have any doubts or questions regarding the contents then kindly fill out the feedback form and we, at My Application Pvt. Ltd. appreciate your feedback and promise you better services.This is your opportunity to let us know how you feel about our Company.
+         Corporate Office :    
+
+               My Application Pvt. Ltd.
+
+                    10/11 ,Rahul Enclave Near Atul Nagar
+
+                    MUM-BLR Express Highway, Warje, PUNE 58.
+
+                    Tel:+91 (020) 30421077
+
+                    Fax:+91 (020) 25204173 
+
+                    E-mail: contact@softaiminnovations.com , sales@softaiminnovations.com , hr@softaiminnovations.com
+
+ 
+         Development Center :
+
+               My Application Pvt. Ltd.
+
+                    301, 3rd Floor Rahul Enclave Near Atul Nagar
+
+                    MUM-BLR Express Highway, Warje, PUNE 58. </p>
+</div>
+</div>

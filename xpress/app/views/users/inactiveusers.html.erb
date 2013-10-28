@@ -1,0 +1,21 @@
+<h1><center>All Inactive Users</center></h1>
+
+<% for detail in @details %>
+<% for book in @books %>
+<%if ((detail.user_id!=book.user_id)&& (!(detail.noofbooksissued.to_i >= 1)) )%>
+
+<%flag=1%>
+<%else%>
+<%flag=0%>
+<%end%>
+
+<%end%>
+<%if flag==1%>
+<table align="center">
+<tr><td><a href="/details/<%=detail.user_id%>"><%=detail.firstname%></a></td></tr>
+<%end%>
+
+<%end%>
+
+</table>
+

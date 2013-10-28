@@ -1,0 +1,32 @@
+class UsersController < ApplicationController
+def userhome
+
+end
+
+def issuerequest
+ @books=Book.find(:all)
+render :layout=>'ajax'
+end
+def activeusers
+ @users=User.find(:all)
+ @books=Book.find(:all)
+ @details=Detail.find(:all)
+if user_signed_in?
+	session[:act] = "activeusers"
+end
+render :layout=>'ajax'
+end
+def inactiveusers
+ @users=User.find(:all)
+ @books=Book.find(:all)
+ @details=Detail.find(:all)
+ render :layout=>'ajax'
+end
+def approvemsg
+	book_id = params[:book_id]
+	userId= current_user.id
+	#render text: book_id.inspect
+	render text: userId.inspect
+	request_status="Pending"
+end
+end

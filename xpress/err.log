@@ -1,0 +1,669 @@
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2/mysql2.so: [BUG] Segmentation fault
+ruby 2.0.0p247 (2013-06-27) [x64-mingw32]
+
+-- Control frame information -----------------------------------------------
+c:0018 p:-10111344 s:0062 e:000061 TOP    [FINISH]
+c:0017 p:---- s:0060 e:000059 CFUNC  :require
+c:0016 p:0083 s:0056 e:000055 TOP    c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2.rb:8 [FINISH]
+c:0015 p:---- s:0054 e:000053 CFUNC  :require
+c:0014 p:0021 s:0050 e:000049 BLOCK  c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:72 [FINISH]
+c:0013 p:---- s:0047 e:000046 CFUNC  :each
+c:0012 p:0055 s:0044 e:000043 BLOCK  c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:70 [FINISH]
+c:0011 p:---- s:0037 e:000036 CFUNC  :each
+c:0010 p:0030 s:0034 e:000033 METHOD c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:59
+c:0009 p:0013 s:0030 e:000029 METHOD c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler.rb:132
+c:0008 p:0049 s:0026 e:000025 TOP    d:/xpress/xpress/config/application.rb:7 [FINISH]
+c:0007 p:---- s:0024 e:000023 CFUNC  :require
+c:0006 p:0014 s:0020 e:000019 BLOCK  c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:76 [FINISH]
+c:0005 p:---- s:0017 e:000016 CFUNC  :tap
+c:0004 p:0586 s:0014 e:000013 TOP    c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:73 [FINISH]
+c:0003 p:---- s:0008 e:000007 CFUNC  :require
+c:0002 p:0034 s:0004 E:000db8 EVAL   bin/rails:4 [FINISH]
+c:0001 p:0000 s:0002 E:002208 TOP    [FINISH]
+
+bin/rails:4:in `<main>'
+bin/rails:4:in `require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:73:in `<top (required)>'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:73:in `tap'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:76:in `block in <top (required)>'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands.rb:76:in `require'
+d:/xpress/xpress/config/application.rb:7:in `<top (required)>'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2.rb:8:in `<top (required)>'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2.rb:8:in `require'
+
+-- C level backtrace information -------------------------------------------
+C:\Windows\SYSTEM32\ntdll.dll(NtWaitForSingleObject+0xa) [0x00000000775512FA]
+C:\Windows\system32\KERNELBASE.dll(WaitForSingleObjectEx+0x9c) [0x000007FEFD3A10DC]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_bugreport+0x9d) [0x000000006F28327D]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_name_err_mesg_new+0x838) [0x000000006F141DF8]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_bug+0x45) [0x000000006F142BA5]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_check_safe_str+0x18c) [0x000000006F208E5C]
+ [0x0000000000401A85]
+C:\Windows\SYSTEM32\ntdll.dll(_C_specific_handler+0x9c) [0x00000000775185C8]
+C:\Windows\SYSTEM32\ntdll.dll(RtlDecodePointer+0xad) [0x0000000077529D2D]
+C:\Windows\SYSTEM32\ntdll.dll(RtlUnwindEx+0xbbf) [0x00000000775191CF]
+C:\Windows\SYSTEM32\ntdll.dll(KiUserExceptionDispatcher+0x2e) [0x0000000077551248]
+ [0x000002D881F00000]
+ [0x0000000001F82F3D]
+c:\Ruby200-x64\lib\ruby\gems\2.0.0\gems\mysql2-0.3.13\lib\mysql2\mysql2.so(Init_mysql2+0x5a) [0x0000000001F83C0A]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(dln_load+0x1d3) [0x000000006F101643]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_call_cfunc+0x12c) [0x000000006F28078C]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_require_safe+0x42b) [0x000000006F14D38B]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_add_method_cfunc+0x5f2) [0x000000006F27DF22]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x21c8) [0x000000006F272CD8]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_iseq_eval+0x193) [0x000000006F2801D3]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_rubylevel_errinfo+0x5ea) [0x000000006F14B83A]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_require_safe+0x45e) [0x000000006F14D3BE]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x21c8) [0x000000006F272CD8]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_yield+0x15c) [0x000000006F27FDDC]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_ary_each+0x51) [0x000000006F106851]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x2161) [0x000000006F272C71]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_yield+0x15c) [0x000000006F27FDDC]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_ary_each+0x51) [0x000000006F106851]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_add_method_cfunc+0x5f2) [0x000000006F27DF22]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x2161) [0x000000006F272C71]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_iseq_eval+0x193) [0x000000006F2801D3]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_rubylevel_errinfo+0x5ea) [0x000000006F14B83A]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_require_safe+0x45e) [0x000000006F14D3BE]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_add_method_cfunc+0x5f2) [0x000000006F27DF22]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x21c8) [0x000000006F272CD8]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_yield+0x15c) [0x000000006F27FDDC]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_obj_tap+0x16) [0x000000006F19ECF6]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_add_method_cfunc+0x5f2) [0x000000006F27DF22]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x2161) [0x000000006F272C71]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_iseq_eval+0x193) [0x000000006F2801D3]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_rubylevel_errinfo+0x5ea) [0x000000006F14B83A]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_require_safe+0x45e) [0x000000006F14D3BE]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_error_arity+0x125) [0x000000006F26E485]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_add_method_cfunc+0x5f2) [0x000000006F27DF22]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x21c8) [0x000000006F272CD8]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_vm_localjump_error+0x5ed9) [0x000000006F2769E9]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_iseq_eval_main+0x1e0) [0x000000006F280400]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(rb_check_copyable+0x31f6) [0x000000006F147AD6]
+c:\Ruby200-x64\bin\x64-msvcrt-ruby200.dll(ruby_run_node+0x51) [0x000000006F14A421]
+ [0x0000000000402D14]
+ [0x00000000004013D7]
+ [0x00000000004014F8]
+C:\Windows\system32\kernel32.dll(BaseThreadInitThunk+0xd) [0x00000000772F652D]
+
+-- Other runtime information -----------------------------------------------
+
+* Loaded script: bin/rails
+
+* Loaded features:
+
+    0 enumerator.so
+    1 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/encdb.so
+    2 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/iso_8859_1.so
+    3 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/trans/transdb.so
+    4 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/rbconfig.rb
+    5 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/compatibility.rb
+    6 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/defaults.rb
+    7 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/deprecate.rb
+    8 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/errors.rb
+    9 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/version.rb
+   10 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/requirement.rb
+   11 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/platform.rb
+   12 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/basic_specification.rb
+   13 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/stub_specification.rb
+   14 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/specification.rb
+   15 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/exceptions.rb
+   16 c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/defaults/operating_system.rb
+   17 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/utf_16le.so
+   18 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/trans/utf_16_32.so
+   19 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_gem.rb
+   20 c:/Ruby200-x64/lib/ruby/2.0.0/thread.rb
+   21 c:/Ruby200-x64/lib/ruby/2.0.0/monitor.rb
+   22 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb
+   23 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems.rb
+   24 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/trans/single_byte.so
+   25 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/path_support.rb
+   26 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/dependency.rb
+   27 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/pathname.so
+   28 c:/Ruby200-x64/lib/ruby/2.0.0/pathname.rb
+   29 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/user_interaction.rb
+   30 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/etc.so
+   31 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/config_file.rb
+   32 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/rubygems_integration.rb
+   33 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/shared_helpers.rb
+   34 c:/Ruby200-x64/lib/ruby/2.0.0/fileutils.rb
+   35 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/gem_path_manipulation.rb
+   36 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/gem_helpers.rb
+   37 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/match_platform.rb
+   38 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/rubygems_ext.rb
+   39 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/version.rb
+   40 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler.rb
+   41 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/settings.rb
+   42 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/digest.so
+   43 c:/Ruby200-x64/lib/ruby/2.0.0/digest.rb
+   44 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/digest/sha1.so
+   45 c:/Ruby200-x64/lib/ruby/2.0.0/set.rb
+   46 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/definition.rb
+   47 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/dependency.rb
+   48 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/ruby_dsl.rb
+   49 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/dsl.rb
+   50 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source.rb
+   51 c:/Ruby200-x64/lib/ruby/2.0.0/uri/common.rb
+   52 c:/Ruby200-x64/lib/ruby/2.0.0/uri/generic.rb
+   53 c:/Ruby200-x64/lib/ruby/2.0.0/uri/ftp.rb
+   54 c:/Ruby200-x64/lib/ruby/2.0.0/uri/http.rb
+   55 c:/Ruby200-x64/lib/ruby/2.0.0/uri/https.rb
+   56 c:/Ruby200-x64/lib/ruby/2.0.0/uri/ldap.rb
+   57 c:/Ruby200-x64/lib/ruby/2.0.0/uri/ldaps.rb
+   58 c:/Ruby200-x64/lib/ruby/2.0.0/uri/mailto.rb
+   59 c:/Ruby200-x64/lib/ruby/2.0.0/uri.rb
+   60 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/socket.so
+   61 c:/Ruby200-x64/lib/ruby/2.0.0/socket.rb
+   62 c:/Ruby200-x64/lib/ruby/2.0.0/timeout.rb
+   63 c:/Ruby200-x64/lib/ruby/2.0.0/net/protocol.rb
+   64 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/zlib.so
+   65 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/stringio.so
+   66 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/exceptions.rb
+   67 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/header.rb
+   68 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/generic_request.rb
+   69 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/request.rb
+   70 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/requests.rb
+   71 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/response.rb
+   72 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/responses.rb
+   73 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/proxy_delta.rb
+   74 c:/Ruby200-x64/lib/ruby/2.0.0/net/http/backward.rb
+   75 c:/Ruby200-x64/lib/ruby/2.0.0/net/http.rb
+   76 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/date_core.so
+   77 c:/Ruby200-x64/lib/ruby/2.0.0/date/format.rb
+   78 c:/Ruby200-x64/lib/ruby/2.0.0/date.rb
+   79 c:/Ruby200-x64/lib/ruby/2.0.0/time.rb
+   80 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/request.rb
+   81 c:/Ruby200-x64/lib/ruby/2.0.0/cgi/core.rb
+   82 c:/Ruby200-x64/lib/ruby/2.0.0/cgi/util.rb
+   83 c:/Ruby200-x64/lib/ruby/2.0.0/cgi/cookie.rb
+   84 c:/Ruby200-x64/lib/ruby/2.0.0/cgi.rb
+   85 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/uri_formatter.rb
+   86 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/fcntl.so
+   87 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/openssl.so
+   88 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/bn.rb
+   89 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/cipher.rb
+   90 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/config.rb
+   91 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/digest.rb
+   92 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/x509.rb
+   93 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/buffering.rb
+   94 c:/Ruby200-x64/lib/ruby/2.0.0/openssl/ssl.rb
+   95 c:/Ruby200-x64/lib/ruby/2.0.0/openssl.rb
+   96 c:/Ruby200-x64/lib/ruby/2.0.0/securerandom.rb
+   97 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/fiddle.so
+   98 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/function.rb
+   99 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/closure.rb
+  100 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle.rb
+  101 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/value.rb
+  102 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/pack.rb
+  103 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/struct.rb
+  104 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/cparser.rb
+  105 c:/Ruby200-x64/lib/ruby/2.0.0/fiddle/import.rb
+  106 c:/Ruby200-x64/lib/ruby/2.0.0/win32/registry.rb
+  107 c:/Ruby200-x64/lib/ruby/2.0.0/win32/resolv.rb
+  108 c:/Ruby200-x64/lib/ruby/2.0.0/resolv.rb
+  109 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/remote_fetcher.rb
+  110 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/text.rb
+  111 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/name_tuple.rb
+  112 c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/spec_fetcher.rb
+  113 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/rubygems.rb
+  114 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/strscan.so
+  115 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/path.rb
+  116 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/source/git.rb
+  117 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/lockfile_parser.rb
+  118 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/lazy_specification.rb
+  119 c:/Ruby200-x64/lib/ruby/2.0.0/tsort.rb
+  120 c:/Ruby200-x64/lib/ruby/2.0.0/forwardable.rb
+  121 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/spec_set.rb
+  122 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/environment.rb
+  123 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/runtime.rb
+  124 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/index.rb
+  125 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/remote_specification.rb
+  126 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/endpoint_specification.rb
+  127 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/dep_proxy.rb
+  128 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/bundler-1.3.5/lib/bundler/setup.rb
+  129 d:/xpress/xpress/config/boot.rb
+  130 c:/Ruby200-x64/lib/ruby/2.0.0/optparse.rb
+  131 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe/version.rb
+  132 c:/Ruby200-x64/lib/ruby/2.0.0/delegate.rb
+  133 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe/synchronized_delegator.rb
+  134 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe.rb
+  135 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/array/prepend_and_append.rb
+  136 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/deep_merge.rb
+  137 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/except.rb
+  138 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/slice.rb
+  139 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/i18n-0.6.5/lib/i18n/version.rb
+  140 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/i18n-0.6.5/lib/i18n/exceptions.rb
+  141 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/i18n-0.6.5/lib/i18n/interpolate/ruby.rb
+  142 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/i18n-0.6.5/lib/i18n.rb
+  143 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/lazy_load_hooks.rb
+  144 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/i18n-0.6.5/lib/i18n/config.rb
+  145 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/i18n.rb
+  146 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe/non_concurrent_cache_backend.rb
+  147 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe/mri_cache_backend.rb
+  148 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/thread_safe-0.1.3/lib/thread_safe/cache.rb
+  149 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/inflector/inflections.rb
+  150 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/inflections.rb
+  151 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/inflector/methods.rb
+  152 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/dependencies/autoload.rb
+  153 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/version.rb
+  154 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/array/extract_options.rb
+  155 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/class/attribute_accessors.rb
+  156 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/concern.rb
+  157 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/logger_silence.rb
+  158 c:/Ruby200-x64/lib/ruby/2.0.0/logger.rb
+  159 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/logger.rb
+  160 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support.rb
+  161 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/blank.rb
+  162 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/kernel/singleton_class.rb
+  163 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/remove_method.rb
+  164 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/class/attribute.rb
+  165 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/delegation.rb
+  166 c:/Ruby200-x64/lib/ruby/2.0.0/singleton.rb
+  167 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation/instance_delegator.rb
+  168 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb
+  169 c:/Ruby200-x64/lib/ruby/2.0.0/mutex_m.rb
+  170 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications/fanout.rb
+  171 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/per_thread_registry.rb
+  172 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/notifications.rb
+  173 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation/behaviors.rb
+  174 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation/reporting.rb
+  175 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/aliasing.rb
+  176 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation/method_wrappers.rb
+  177 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation/proxy_wrappers.rb
+  178 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/deprecation.rb
+  179 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/deprecation.rb
+  180 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/rails.rb
+  181 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/attribute_accessors.rb
+  182 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_pack/version.rb
+  183 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_pack.rb
+  184 c:/Ruby200-x64/lib/ruby/2.0.0/tmpdir.rb
+  185 c:/Ruby200-x64/lib/ruby/2.0.0/tempfile.rb
+  186 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/multipart.rb
+  187 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/utils.rb
+  188 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack.rb
+  189 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch.rb
+  190 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/server.rb
+  191 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/commands/server.rb
+  192 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/ruby_version_check.rb
+  193 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/kernel/reporting.rb
+  194 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/key_generator.rb
+  195 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/initializable.rb
+  196 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/ordered_options.rb
+  197 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/acts_like.rb
+  198 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/bigdecimal.so
+  199 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/duplicable.rb
+  200 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/deep_dup.rb
+  201 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/try.rb
+  202 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/inclusion.rb
+  203 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/to_param.rb
+  204 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/to_query.rb
+  205 c:/Ruby200-x64/lib/ruby/2.0.0/base64.rb
+  206 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/multibyte.rb
+  207 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/multibyte.rb
+  208 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/inflector/transliterate.rb
+  209 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/inflections.rb
+  210 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/xml_mini/rexml.rb
+  211 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/xml_mini.rb
+  212 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/keys.rb
+  213 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/array/conversions.rb
+  214 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time/acts_like.rb
+  215 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/proxy_object.rb
+  216 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/duration.rb
+  217 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/values/time_zone.rb
+  218 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time/conversions.rb
+  219 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/time_with_zone.rb
+  220 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time/zones.rb
+  221 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_and_time/calculations.rb
+  222 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time/calculations.rb
+  223 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time/marshal.rb
+  224 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/time.rb
+  225 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date/acts_like.rb
+  226 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date/zones.rb
+  227 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date/calculations.rb
+  228 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date/conversions.rb
+  229 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date.rb
+  230 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_time/acts_like.rb
+  231 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_time/calculations.rb
+  232 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_time/conversions.rb
+  233 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_time/zones.rb
+  234 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/date_time.rb
+  235 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/numeric/time.rb
+  236 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/integer/time.rb
+  237 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/conversions.rb
+  238 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/zones.rb
+  239 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/time.rb
+  240 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/array/wrap.rb
+  241 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/reverse_merge.rb
+  242 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/conversions.rb
+  243 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/conversions.rb
+  244 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/instance_variables.rb
+  245 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/version.rb
+  246 c:/Ruby200-x64/lib/ruby/2.0.0/ostruct.rb
+  247 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/generic_object.rb
+  248 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/common.rb
+  249 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/utf_16be.so
+  250 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/utf_32be.so
+  251 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/enc/utf_32le.so
+  252 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/ext/parser.so
+  253 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/ext/generator.so
+  254 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json/ext.rb
+  255 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/json-1.8.1/lib/json.rb
+  256 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/to_json.rb
+  257 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/option_merger.rb
+  258 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object/with_options.rb
+  259 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/object.rb
+  260 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/paths.rb
+  261 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/rack.rb
+  262 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/configuration.rb
+  263 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/inflector.rb
+  264 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/introspection.rb
+  265 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/railtie.rb
+  266 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/engine/railties.rb
+  267 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/engine.rb
+  268 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/application.rb
+  269 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/version.rb
+  270 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/deprecation.rb
+  271 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/file_update_checker.rb
+  272 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/railtie/configurable.rb
+  273 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/railtie/configuration.rb
+  274 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/i18n_railtie.rb
+  275 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/railtie.rb
+  276 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/railtie.rb
+  277 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails.rb
+  278 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activemodel-4.0.0/lib/active_model/version.rb
+  279 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activemodel-4.0.0/lib/active_model.rb
+  280 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/crud.rb
+  281 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/factory_methods.rb
+  282 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/expressions.rb
+  283 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/predications.rb
+  284 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/window_predications.rb
+  285 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/math.rb
+  286 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/alias_predication.rb
+  287 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/order_predications.rb
+  288 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/table.rb
+  289 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/attributes/attribute.rb
+  290 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/attributes.rb
+  291 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/compatibility/wheres.rb
+  292 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/expression.rb
+  293 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/visitor.rb
+  294 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/depth_first.rb
+  295 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/to_sql.rb
+  296 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/sqlite.rb
+  297 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/postgresql.rb
+  298 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/mysql.rb
+  299 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/mssql.rb
+  300 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/oracle.rb
+  301 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/join_sql.rb
+  302 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/where_sql.rb
+  303 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/order_clauses.rb
+  304 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/dot.rb
+  305 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/ibm_db.rb
+  306 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors/informix.rb
+  307 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/visitors.rb
+  308 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/tree_manager.rb
+  309 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/insert_manager.rb
+  310 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/select_manager.rb
+  311 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/update_manager.rb
+  312 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/delete_manager.rb
+  313 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/node.rb
+  314 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/select_statement.rb
+  315 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/select_core.rb
+  316 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/insert_statement.rb
+  317 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/update_statement.rb
+  318 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/terminal.rb
+  319 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/true.rb
+  320 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/false.rb
+  321 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/unary.rb
+  322 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/grouping.rb
+  323 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/ascending.rb
+  324 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/descending.rb
+  325 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/unqualified_column.rb
+  326 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/with.rb
+  327 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/binary.rb
+  328 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/equality.rb
+  329 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/in.rb
+  330 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/join_source.rb
+  331 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/delete_statement.rb
+  332 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/table_alias.rb
+  333 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/infix_operation.rb
+  334 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/over.rb
+  335 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/and.rb
+  336 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/function.rb
+  337 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/count.rb
+  338 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/extract.rb
+  339 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/values.rb
+  340 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/named_function.rb
+  341 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/window.rb
+  342 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/inner_join.rb
+  343 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/outer_join.rb
+  344 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/string_join.rb
+  345 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes/sql_literal.rb
+  346 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/nodes.rb
+  347 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/deprecated.rb
+  348 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/sql/engine.rb
+  349 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel/sql_literal.rb
+  350 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/arel-4.0.1/lib/arel.rb
+  351 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/version.rb
+  352 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders.rb
+  353 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/version.rb
+  354 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/enumerable.rb
+  355 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activemodel-4.0.0/lib/active_model/attribute_methods.rb
+  356 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/attribute_methods.rb
+  357 c:/Ruby200-x64/lib/ruby/2.0.0/bigdecimal/util.rb
+  358 c:/Ruby200-x64/lib/ruby/2.0.0/benchmark.rb
+  359 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb
+  360 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/schema_cache.rb
+  361 c:/Ruby200-x64/lib/ruby/2.0.0/ipaddr.rb
+  362 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/schema_dumper.rb
+  363 c:/Ruby200-x64/lib/ruby/2.0.0/psych/syntax_error.rb
+  364 c:/Ruby200-x64/lib/ruby/2.0.0/x64-mingw32/psych.so
+  365 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/node.rb
+  366 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/stream.rb
+  367 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/document.rb
+  368 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/sequence.rb
+  369 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/scalar.rb
+  370 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/mapping.rb
+  371 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes/alias.rb
+  372 c:/Ruby200-x64/lib/ruby/2.0.0/psych/nodes.rb
+  373 c:/Ruby200-x64/lib/ruby/2.0.0/psych/streaming.rb
+  374 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/visitor.rb
+  375 c:/Ruby200-x64/lib/ruby/2.0.0/psych/scalar_scanner.rb
+  376 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/to_ruby.rb
+  377 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/emitter.rb
+  378 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/yaml_tree.rb
+  379 c:/Ruby200-x64/lib/ruby/2.0.0/psych/json/ruby_events.rb
+  380 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/json_tree.rb
+  381 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors/depth_first.rb
+  382 c:/Ruby200-x64/lib/ruby/2.0.0/psych/visitors.rb
+  383 c:/Ruby200-x64/lib/ruby/2.0.0/psych/handler.rb
+  384 c:/Ruby200-x64/lib/ruby/2.0.0/psych/tree_builder.rb
+  385 c:/Ruby200-x64/lib/ruby/2.0.0/psych/parser.rb
+  386 c:/Ruby200-x64/lib/ruby/2.0.0/psych/omap.rb
+  387 c:/Ruby200-x64/lib/ruby/2.0.0/psych/set.rb
+  388 c:/Ruby200-x64/lib/ruby/2.0.0/psych/coder.rb
+  389 c:/Ruby200-x64/lib/ruby/2.0.0/psych/core_ext.rb
+  390 c:/Ruby200-x64/lib/ruby/2.0.0/psych/deprecated.rb
+  391 c:/Ruby200-x64/lib/ruby/2.0.0/psych/stream.rb
+  392 c:/Ruby200-x64/lib/ruby/2.0.0/psych/json/yaml_events.rb
+  393 c:/Ruby200-x64/lib/ruby/2.0.0/psych/json/tree_builder.rb
+  394 c:/Ruby200-x64/lib/ruby/2.0.0/psych/json/stream.rb
+  395 c:/Ruby200-x64/lib/ruby/2.0.0/psych/handlers/document_stream.rb
+  396 c:/Ruby200-x64/lib/ruby/2.0.0/psych.rb
+  397 c:/Ruby200-x64/lib/ruby/2.0.0/yaml.rb
+  398 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/big_decimal/conversions.rb
+  399 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/quoting.rb
+  400 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/database_statements.rb
+  401 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/errors.rb
+  402 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/migration.rb
+  403 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/migration/join_table.rb
+  404 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/schema_statements.rb
+  405 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/database_limits.rb
+  406 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb
+  407 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/descendants_tracker.rb
+  408 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/callbacks.rb
+  409 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract_adapter.rb
+  410 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/scoping.rb
+  411 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record.rb
+  412 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activemodel-4.0.0/lib/active_model/railtie.rb
+  413 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/attr_internal.rb
+  414 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/anonymous.rb
+  415 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller.rb
+  416 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/request.rb
+  417 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/response.rb
+  418 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/http/filter_redirect.rb
+  419 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/http/cache.rb
+  420 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/http/response.rb
+  421 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/live.rb
+  422 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/hash_with_indifferent_access.rb
+  423 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/hash/indifferent_access.rb
+  424 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/proc.rb
+  425 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/rescuable.rb
+  426 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/http/upload.rb
+  427 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+  428 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+  429 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test/mock_digest_request.rb
+  430 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test/utils.rb
+  431 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test/methods.rb
+  432 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test/uploaded_file.rb
+  433 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-test-0.6.2/lib/rack/test.rb
+  434 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/metal/strong_parameters.rb
+  435 c:/Ruby200-x64/lib/ruby/2.0.0/erb.rb
+  436 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/output_safety.rb
+  437 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view.rb
+  438 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/vendor/html-scanner.rb
+  439 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/load_error.rb
+  440 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/name_error.rb
+  441 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/uri.rb
+  442 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller.rb
+  443 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/railtie.rb
+  444 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/abstract_controller/railties/routes_helpers.rb
+  445 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/railties/helpers.rb
+  446 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_controller/railtie.rb
+  447 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0/lib/active_record/railtie.rb
+  448 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionmailer-4.0.0/lib/action_mailer/version.rb
+  449 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/class/delegating_attributes.rb
+  450 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/reachable.rb
+  451 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/class/subclasses.rb
+  452 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/class.rb
+  453 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionmailer-4.0.0/lib/action_mailer.rb
+  454 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionmailer-4.0.0/lib/action_mailer/railtie.rb
+  455 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/test_unit/railtie.rb
+  456 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/version.rb
+  457 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike.rb
+  458 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/template.rb
+  459 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/string.rb
+  460 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/erb.rb
+  461 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/etanni.rb
+  462 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/haml.rb
+  463 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/css.rb
+  464 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/csv.rb
+  465 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/coffee.rb
+  466 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/nokogiri.rb
+  467 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/builder.rb
+  468 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/markaby.rb
+  469 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/liquid.rb
+  470 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/radius.rb
+  471 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/markdown.rb
+  472 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/textile.rb
+  473 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/rdoc.rb
+  474 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/wiki.rb
+  475 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/yajl.rb
+  476 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/asciidoc.rb
+  477 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt/plain.rb
+  478 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/tilt-1.4.1/lib/tilt.rb
+  479 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/eco_template.rb
+  480 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/ejs_template.rb
+  481 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/jst_processor.rb
+  482 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/utils.rb
+  483 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/engines.rb
+  484 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/mime.rb
+  485 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/mime.rb
+  486 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/processor.rb
+  487 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/processing.rb
+  488 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/compressing.rb
+  489 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/paths.rb
+  490 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike/normalized_array.rb
+  491 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike/extensions.rb
+  492 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike/index.rb
+  493 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike/paths.rb
+  494 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/hike-1.2.3/lib/hike/trail.rb
+  495 c:/Ruby200-x64/lib/ruby/2.0.0/shellwords.rb
+  496 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/directive_processor.rb
+  497 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/safety_colons.rb
+  498 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/charset_normalizer.rb
+  499 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/sass_compressor.rb
+  500 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/yui_compressor.rb
+  501 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/closure_compressor.rb
+  502 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/uglifier_compressor.rb
+  503 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/sass_template.rb
+  504 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets/scss_template.rb
+  505 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-2.10.0/lib/sprockets.rb
+  506 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/benchmarkable.rb
+  507 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/active_model_helper.rb
+  508 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/asset_url_helper.rb
+  509 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/capture_helper.rb
+  510 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/tag_helper.rb
+  511 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/asset_tag_helper.rb
+  512 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/atom_feed_helper.rb
+  513 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/cache_helper.rb
+  514 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/controller_helper.rb
+  515 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/csrf_helper.rb
+  516 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/date_helper.rb
+  517 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/debug_helper.rb
+  518 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/javascript_helper.rb
+  519 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/array/access.rb
+  520 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/url_helper.rb
+  521 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/string/filters.rb
+  522 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/sanitize_helper.rb
+  523 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/text_helper.rb
+  524 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/form_tag_helper.rb
+  525 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/tags.rb
+  526 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/model_naming.rb
+  527 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/form_helper.rb
+  528 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/form_options_helper.rb
+  529 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/number_helper.rb
+  530 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/number_helper.rb
+  531 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/output_safety_helper.rb
+  532 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module/qualified_const.rb
+  533 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/core_ext/module.rb
+  534 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/record_identifier.rb
+  535 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/record_tag_helper.rb
+  536 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/rendering_helper.rb
+  537 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers/translation_helper.rb
+  538 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_view/helpers.rb
+  539 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-rails-2.0.1/lib/sprockets/rails/helper.rb
+  540 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/engine/configuration.rb
+  541 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/application/configuration.rb
+  542 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sprockets-rails-2.0.1/lib/sprockets/railtie.rb
+  543 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/all.rb
+  544 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0/lib/active_support/string_inquirer.rb
+  545 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2/version.rb
+  546 c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/mysql2-0.3.13/lib/mysql2/error.rb
+
+[NOTE]
+You may have encountered a bug in the Ruby interpreter or extension libraries.
+Bug reports are welcome.
+For details: http://www.ruby-lang.org/bugreport.html
+
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.

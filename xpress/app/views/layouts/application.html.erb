@@ -1,0 +1,41 @@
+<%
+response.headers["Cache-Control"]="no-cache, no-store, must-revalidate" #HTTP1.1.
+response.headers["Pragma"]="no-cache" #HTTP1.0.
+response.headers["Expires"]="O" #Proxies.
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xpress</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='wrap-outer'>
+<div class='wrap-inner'>
+
+<div id="header">
+<div id="pos">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</div>
+<div class="head"><h1>LIBRARY MANAGEMENT SYSTEM</h1></div>
+
+</div>
+<div class='wrapper'>
+<%= yield %>
+</div>
+
+
+</div>
+</div>
+<div id="footer"><h3><center>Tata Consultancy Services</center></h3></div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>Welcome "<%=current_user.detail.firstname %>"</h1>
+
+
+<a href="/details/<%=current_user.id%>">Show my details</a></br>
+
+<%=link_to 'Raise Issue Request', users_issuerequest_path %>

@@ -1,0 +1,28 @@
+<script>
+	$(function() {
+		$( "#tabs" ).tabs({
+			beforeLoad: function( event, ui ) {
+				ui.jqXHR.error(function() {
+					ui.panel.html("Couldn't load this tab. We'll try to fix this as soon as possible. If this wouldn't be 						a demo." );
+				});
+			}
+		});
+	});
+</script>
+
+
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Admin Home</a></li>
+<li><%= link_to 'Active Users',  users_activeusers_path %></li>
+<li><%= link_to 'Inactive Users',  users_inactiveusers_path %></li>
+<li><%= link_to 'Manage Books', books_path %></li>
+<li><%=link_to 'Approve Requests', requests_path %></li>
+
+</ul>
+<div id="tabs-1">
+<p><h1>Welcome  <%=current_user.detail.firstname %>!!</h1></p>
+</div>
+</div>
+

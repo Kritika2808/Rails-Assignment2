@@ -1,0 +1,19 @@
+
+<h1><center>All Active Users</center></h1>
+<table align="center">
+<% for detail in @details %>
+<% for book in @books %>
+<%if(detail.user_id==book.user_id)%>
+
+
+
+<tr><td><a href="/details/<%=detail.user_id%>"><%=detail.firstname%></a></td></tr>
+<% break -%>
+
+
+<%end%>
+<%end%>
+<%end%>
+
+</table>
+

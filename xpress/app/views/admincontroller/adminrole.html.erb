@@ -1,0 +1,9 @@
+<h1><center>All Users</center></h1>
+
+<% for detail in @details %>
+<%if (detail.user_id==current_user.id)%>
+<table align="center">
+<tr><td><a href="/details/<%=detail.user_id%>"><%=detail.firstname%></a></td></tr>
+</table>
+<%end%>
+<%end%>

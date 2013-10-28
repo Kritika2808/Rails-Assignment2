@@ -1,0 +1,4 @@
+class AddreleasedateToBooks < ActiveRecord::Migration
+  def change
+  end
+end

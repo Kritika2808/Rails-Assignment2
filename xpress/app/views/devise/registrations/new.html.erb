@@ -1,0 +1,38 @@
+<%= link_to 'Home', root_path%>
+<div id='he'><h2 align='center'>Sign up</h2><hr /></div><br />
+
+<%= form_tag(user_registration_path, :method => :post) %>
+<div align='center'><%= devise_error_messages! %>
+  
+	<%	if @detail.errors.any? %>
+<div id="errorExplanation">
+    <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @detail.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    
+<% end %>
+    </ul>
+  </div>
+  <% end %>
+</div>
+<table align='center' cellspacing='10px' >
+<tr><td>First Name:
+</td><td><%= text_field_tag "detail[firstname]", @detail.firstname,:autofocus => true %></td></tr>
+<tr><td>Last Name:</td><td><%= text_field_tag "detail[lastname]", @detail.lastname %></td></tr>
+<tr><td>Gender:</td><td><%= radio_button_tag "detail[gender]", @detail.gender, :checked => :true, :value => :male %>Male<%= radio_button_tag "detail[gender]", @detail.gender, :value => :female %>Female</td></tr>
+<%max = 10
+ro = 3
+col = 30
+%>
+<tr><td>Contact:</td><td><%= text_field_tag "detail[contact]", @detail.contact, :maxlength => max.to_s %></td></tr>
+<tr><td>Address:</td><td><%= text_area_tag "detail[address]", @detail.address, :rows => ro.to_s, :cols => col.to_s %></td></tr>
+<tr><td>Email:</td><td><%= email_field_tag "user[email]", @user.email %></td></tr>
+<tr><td>Password:</td><td><%=password_field_tag "user[password]", @user.password %></td></tr>
+<tr><td>Confirm Password:</td><td><%=password_field_tag "user[password_confirmation]", @user.password_confirmation %></td></tr>
+</table>
+<br />
+  <div align='center'><%= submit_tag "Sign up" %></div>
+</form>
+
+

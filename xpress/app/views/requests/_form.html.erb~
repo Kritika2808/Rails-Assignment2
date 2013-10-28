@@ -1,0 +1,32 @@
+<%= form_for(@request) do |f| %>
+  <% if @request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% @request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table align="center">
+    <tr><td><%= f.label :request_status %></td>
+<td><%if current_user.role.role!="admin"%>
+    <%= f.text_field :request_status, :value=>"Pending", :readonly=>:readonly %>
+<%else%>
+<%= f.select :request_status, options_for_select(%w[Pending Approved]) %>
+<%end%></td></tr>
+ <tr><td>
+    <%= f.label :user %></td>
+    <td><%= f.text_field :user_id %></td></tr>
+ <tr><td>
+    <%= f.label :book %></td>
+    <td><%= f.text_field :book_id %></td></tr>
+  
+  <tr><td colspan="2"><center>
+    <%= f.submit %></center></td></tr>
+  
+  </table>
+<% end %>

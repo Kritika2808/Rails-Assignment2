@@ -1,0 +1,41 @@
+
+
+<%= form_tag(requests_neww_path, :method=>:post)%>
+
+</br>
+<table align="center" height=200px border=1><tr><td>
+  <strong>Book Title:</strong></td>
+  <td><%= @book.book_title %></td></tr>
+
+  <tr><td><strong>Author name:</strong></td>
+  <td><%= @book.author_name %></td></tr>
+
+  <tr><td><strong>No of pages:</strong></td>
+ <td> <%= @book.no_of_pages %></td></tr>
+ 
+ <tr><td> <strong>Book type:</strong></td>
+ <td> <%= @book.book_type %></td></tr>
+
+<tr><td><strong>Status:</strong></td>
+ <td> <%= @book.status %></td></tr>
+
+
+<tr><td><strong>Release Date:</strong></td>
+ <td> <%= @book.releasedate %></td></tr>
+  
+<tr><td><strong>Book_id:  </strong></td>
+<td><input type='text' name='book_id' value='<%= @book.id %>' readonly='readonly' style="border:transparent;background:#ECECEC"/></td></tr>
+</table>
+</br>
+<%if current_user.role.role=="admin"  %>
+<%= link_to 'Edit', edit_book_path(@book) %>
+ |
+<%= link_to 'Back', admincontroller_adminhome_path %>
+<% else%>
+<%= submit_tag("Raise Issue Request") %>
+
+
+|
+<%= link_to 'Back', users_userhome_path %>
+<%end%>
+</form>

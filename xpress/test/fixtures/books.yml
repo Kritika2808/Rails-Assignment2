@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  book_title: MyString
+  author_name: MyString
+  no_of_pages: 1
+  book_type: MyString
+
+two:
+  book_title: MyString
+  author_name: MyString
+  no_of_pages: 1
+  book_type: MyString

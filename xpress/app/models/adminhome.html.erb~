@@ -1,0 +1,6 @@
+<h1>hellooo</h1>
+
+
+<%=link_to 'Create Roles', new_book_path %>
+<%=link_to 'Manage Books', new_book_path %>
+<%=link_to 'Approve Requests', new_book_path %>

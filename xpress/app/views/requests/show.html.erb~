@@ -1,0 +1,28 @@
+
+
+<p>
+  <strong>Request status:</strong>
+  <%= @request.request_status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @request.user.id %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @request.book_id %>
+</p>
+
+<p>
+<%= image_tag("index.jpeg")%>
+</p>
+<%if current_user.role.role=="admin"  %>
+<%= link_to 'Edit', edit_request_path(@request) %>
+ |
+<%= link_to 'Back', admincontroller_adminhome_path %>
+<% else%>
+
+<%= link_to 'Back', users_userhome_path %>
+<%end%>

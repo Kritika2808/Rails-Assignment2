@@ -1,0 +1,10 @@
+<%current_user.books.each do |book|%>
+
+
+  
+<table>
+<tr><td>Book Name:&nbsp;&nbsp;<%= book.book_title %>&nbsp;|</td><td>Status:&nbsp;&nbsp;<%= book.status %></td></tr>
+<table>
+
+<%end%>
+

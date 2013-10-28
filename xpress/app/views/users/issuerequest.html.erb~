@@ -1,0 +1,12 @@
+<h1><center>All Available Books</center></h1>
+
+<% for book in @books %>
+<%if(book.status=="Available")%>
+<table align="center">
+<tr><td><a href="/books/<%=book.id%>"><%=book.book_title%></a></td></tr>
+
+<%end%>
+<%end%>
+<tr><td><%=link_to 'Back', users_userhome_path %></td></tr>
+</table>
+

@@ -1,0 +1,53 @@
+ <script>
+$(function() {
+$( "#accordion" ).accordion();
+});
+</script>
+
+<div id="accordion">
+<h3>User Details</h3>
+<div>
+<p>
+  <strong>First name:</strong>
+  <%= @detail.firstname %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @detail.lastname %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @detail.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @detail.contact %>
+</p>
+
+<%if session[:act].eql?("activeusers")%>
+<p>
+  <strong>Number of books issued:</strong>
+  <%= @detail.noofbooksissued %>
+</p>
+<% session[:act] = nil %>
+<%end%>
+
+<%if current_user.role.role=="admin"%>
+<%= link_to 'Back', admincontroller_adminhome_path%>
+<%end%>
+</div>
+<%if current_user.role.role!="admin"%>
+
+<h3>Book Issue details</h3>
+<div>
+<p>
+<%= render 'show' %>
+
+</p>
+</div>
+<%end%>
+</div>
+

@@ -1,0 +1,64 @@
+<script>
+	$(function() {
+		$( "#tabs" ).tabs({
+			beforeLoad: function( event, ui ) {
+				ui.jqXHR.error(function() {
+					ui.panel.html("Couldn't load this tab. We'll try to fix this as soon as possible. If this wouldn't be 						a demo." );
+				});
+			}
+		});
+	});
+</script>
+
+
+
+
+
+
+
+
+<h1>Listing requests</h1>
+
+<table align="center" border="1" width=600px>
+  <thead>
+    <tr>
+      <th>Request status</th>
+      <th>User</th>
+      <th>Book</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.request_status %></td>
+        <td><%= request.user.id %></td>
+        <td><%= request.book_id %></td>
+	
+        <td><%= link_to 'Show', request %></td>
+        <td><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td>
+<%
+	@detail.user_id=request.user_id
+	@detail=Detail.find(@detail.user_id)
+	firstname=@detail.firstname
+	num=@detail.noofbooksissued
+%>
+
+<%if (num.to_i > 2) %>
+<%= image_tag("index.jpg") %>
+<% end %>
+
+                </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%=will_paginate @requests%>
+<br>
+
+

@@ -1,0 +1,44 @@
+
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs({
+			beforeLoad: function( event, ui ) {
+				ui.jqXHR.error(function() {
+					ui.panel.html("Couldn't load this tab. We'll try to fix this as soon as possible. If this wouldn't be 						a demo." );
+				});
+			}
+		});
+	});
+</script>
+
+
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Home</a></li>
+
+<li><a href="/details/<%=current_user.id%>">Show my details</a></li>
+<li><%=link_to 'Raise Issue Request', users_issuerequest_path %></li>
+
+
+</ul>
+<div id="tabs-1">
+<p><h1><center>Welcome  <%=current_user.detail.firstname %>!!</center></h1></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

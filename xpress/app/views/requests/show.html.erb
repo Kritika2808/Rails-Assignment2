@@ -1,0 +1,23 @@
+
+
+<table align="center">
+  <tr><td><strong>Request status:</strong></td>
+  <td><%= @request.request_status %></td></tr>
+
+   <tr><td><strong>User:</strong></td>
+  <td><%= @request.user.id %></td></tr>
+
+
+  <tr><td><strong>Book:</strong></td>
+  <td><%= @request.book_id %></td></tr>
+</table>
+
+
+<%if current_user.role.role=="admin"  %>
+<%= link_to 'Edit', edit_request_path(@request) %>
+ |
+<%= link_to 'Back', admincontroller_adminhome_path %>
+<% else%>
+
+<%= link_to 'Back', users_userhome_path %>
+<%end%>

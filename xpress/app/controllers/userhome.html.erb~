@@ -1,0 +1,6 @@
+<h1>Welcome "<%=current_user.detail.firstname %>"</h1>
+
+
+<%=link_to 'Show My Details', admincontroller_adminrole_path %></br>
+
+<%=link_to 'Create Issue Request', books_path %>
